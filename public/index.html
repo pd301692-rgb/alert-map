@@ -80,9 +80,10 @@ const TYPES = {
 const enabled = Object.fromEntries(Object.keys(TYPES).map(k => [k, true]));
 
 const map = L.map('map', { zoomControl: true }).setView([48.7, 31.2], 6);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap, &copy; CARTO', maxZoom: 12, minZoom: 5
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors', maxZoom: 12, minZoom: 5
 }).addTo(map);
+map.getPane('tilePane').style.filter = 'invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9)';
 const markers = L.layerGroup().addTo(map);
 const zones = L.layerGroup().addTo(map);
 
