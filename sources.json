@@ -1,0 +1,9 @@
+{
+  "ttlMinutes": 90,
+  "pollSeconds": 20,
+  "telegramChannels": [
+    "kpszsu",
+    "neptun_alarm"
+  ],
+  "comment": "Додавайте лише ПУБЛІЧНІ канали (ті, що відкриваються на t.me/s/назва). Перевірте точні назви каналів. Для тривог по областях задайте змінну середовища ALERTS_TOKEN (токен з alerts.in.ua)."
+}
